@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<h1>posts tagged <a href="/tagged/{{ page.tag }}">{{ page.tag }}</a></h1>
+
+  {% for post in site.posts %}
+    {% if post.tags contains page.tag %}
+    <article class="post smaller">
+      <div class="info">
+      <h1 class="title">{{ post.title }}</h1><span class="date"><a href="{{post.permalink}}"><time datetime="{{ post.date }}">{{ post.date | date: site.theme_config.date_format }}</time></a></span>
+      </div>
+
+      {{- post.content | markdownify | truncatewords: 50 -}}
+    <div></div><center><a href="{{post.permalink}}">more</a><center>
+    </article>
+    {% endif %}
+  {% endfor %}
+
+

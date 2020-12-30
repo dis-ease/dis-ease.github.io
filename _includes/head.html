@@ -1,0 +1,46 @@
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>
+    {%- if page.title -%}
+      {{ page.title }}
+    {%- else -%}
+      {{ site.title }}
+    {%- endif -%}
+  </title>
+
+  {% seo title=false %}
+  {% feed_meta %}
+
+  {% if site.tags != "" %}
+  {% include all_tags.html %}
+  {% endif %}
+
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}" />
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
+    <!--
+  <script type="text/javascript">
+    function setModifiedDate() {
+      if (document.getElementById('last-modified')) {
+        fetch("https://api.github.com/repos/{{ site.github_usename }}/{{ site.github_username }}.github.io/commits?path={{ page.path }}")
+          .then((response) => {
+            return response.json();
+          })
+          .then((commits) => {
+            var modified = commits[0]['commit']['committer']['date'].slice(0,10);
+            if(modified != "{{ page.date | date: "%Y-%m-%d" }}") {
+              document.getElementById('last-modified').textContent = "last modified: " + modified;
+            } 
+            else {
+              document.getElementById('last-modified').textContent = "last modified: never";
+            }
+          });
+      }
+    }
+  </script>
+
+    -->
+</head>
+

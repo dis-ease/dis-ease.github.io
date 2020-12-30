@@ -1,0 +1,128 @@
+.content {
+    display: block;
+    width: 600px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 2rem 2rem 0rem 2rem;
+}
+
+.nav .desc {
+    font-size: 1rem; 
+    margin-bottom: 2rem;
+}
+
+.nav .links{
+    a {
+        font-size: 1.25rem; 
+        margin-right: 1rem;
+    }
+    a.smol {
+        font-size: 1rem!important; 
+    }
+}
+
+.nav h2 {
+    margin:1.25rem auto 0.75rem auto;
+}
+
+.side {
+    padding: 2rem 2rem 0rem 2rem;
+    display: block;
+    position: fixed;
+    max-width: 500px;
+    top: 1rem;
+    left: 2rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer {
+    padding: 4rem 2rem 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.up {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.home {
+    margin-top: 25px;
+}
+
+
+.octicon {
+    fill:-webkit-link; 
+}
+
+.post-list {
+    margin-left: 0;
+    list-style: none;
+    padding: 0;
+
+    > li {
+        margin-bottom: 1rem;
+    }
+    .post-meta {
+        padding-left: 1rem;
+    }
+}
+
+.post-link {
+    font-size: 1.3rem;
+    font-weight: bold;
+    > a {
+        display: block;
+    }
+}
+
+.post {
+    margin-bottom: 5rem;
+}
+
+.post .data {
+    margin-bottom: 2rem;
+}
+
+.post .info {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.post .title {
+    margin: 0!important;
+}
+
+.post .date {
+    float: right;
+    display: inline-block;
+    align-self: flex-end;
+    line-height: 2;
+    .smaller {
+        line-height: 1;
+    }
+}
+
+.post .tags {
+    margin-top: 1rem;
+}
+
+.last-modified {
+    margin-top: 2rem;
+}
+
+
+.smaller {
+    font-size: smaller;
+}
+
+

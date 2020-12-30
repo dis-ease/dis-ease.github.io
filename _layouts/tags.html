@@ -10,9 +10,8 @@ layout: default
       <div class="info">
       <h1 class="title">{{ post.title }}</h1><span class="date"><a href="{{post.permalink}}"><time datetime="{{ post.date }}">{{ post.date | date: site.theme_config.date_format }}</time></a></span>
       </div>
-
-      {{- post.content | markdownify | truncatewords: 50 -}}
-    <div></div><center><a href="{{post.permalink}}">more</a><center>
+        <div>{{- post.content | markdownify | truncatewords: 50 -}}</div>
+        <div><center><a href="{{post.permalink}}">more</a><center></div>
     </article>
     {% endif %}
   {% endfor %}

@@ -11,7 +11,7 @@ layout: default
     <div class="tags smaller">
     {% for tag in page.tags %}
       {% capture tag_name %}{{ tag }}{% endcapture %}
-      <a href="/tag/{{ tag_name }}"><code class="highlighter-rouge">{{ tag_name }}</code></a>
+      <a href="/tagged/{{ tag_name }}"><code class="highlighter-rouge">{{ tag_name }}</code></a>
     {% endfor %}
     </div>
   </div>

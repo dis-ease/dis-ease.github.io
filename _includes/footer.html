@@ -1,5 +1,12 @@
 <footer>
-    <div class="footer content">
-  <a href="https://github.com/{{ site.github_username }}">{% octicon mark-github height:16 %} {{ site.github_username }}</a>
+    <div class="foot content">
+    {% if page.layout == "post" %}
+    <div class="last-modified">
+        <span id="last-modified"></span>
+    </div>
+    {% endif %}
+    <div class="footer">
+    <a href="https://github.com/{{ site.github_username }}">{% octicon mark-github height:14 %} {{ site.github_username }}</a>
+    </div>
     </div>
 </footer>

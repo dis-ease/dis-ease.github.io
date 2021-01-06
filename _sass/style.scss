@@ -42,11 +42,15 @@ footer {
     width: 100%;
 }
 
-.footer {
+.foot {
     padding: 4rem 2rem 2rem 2rem;
+}
+
+.footer {
     display: flex;
     justify-content: space-between;
 }
+
 
 .up {
     position: fixed;
@@ -85,24 +89,32 @@ footer {
 }
 
 .post {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
-.post .data {
+.less {
+    margin-bottom: 3rem;
+}
+
+.data {
     margin-bottom: 2rem;
 }
 
-.post .info {
+.info {
     display: flex;
     justify-content: space-between;
     height: 100%;
 }
 
-.post .title {
+.info h1, .info h2{
     margin: 0!important;
 }
 
-.post .date {
+.post .title, .less .title {
+    margin: 0!important;
+}
+
+.date {
     float: right;
     display: inline-block;
     align-self: flex-end;
@@ -117,12 +129,11 @@ footer {
 }
 
 .last-modified {
-    margin-top: 2rem;
+    margin: 1rem auto;
 }
 
 
 .smaller {
     font-size: smaller;
 }
-
 

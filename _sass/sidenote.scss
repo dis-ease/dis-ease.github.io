@@ -1,0 +1,81 @@
+.sidenote{
+  display: inline;
+}
+.sidenote__button::after{
+  content: "\002a"; /* * */
+  display: inline-block;
+}
+.sidenote__button--number-1::after{
+  content: "\002a"; /* * */
+}
+.sidenote__button--number-2::after{
+  content: "\2051"; /* ⁑ */
+}
+.sidenote__button--number-3::after{
+  content: "\2042"; /* ⁂ */
+}
+.sidenote__button--number-4::after{
+  content: "\2020"; /* ✝ */
+}
+.sidenote__button--number-5::after{
+  content: "\2021"; /* ‡ */  /* ‡ */
+}
+.sidenote__button--number-6::after{
+  content: "\2051\2051"; /* ⁑⁑ */
+}
+.sidenote__button--number-7::after{
+  content: "\2021\2021"; /* ‡‡ */ /* ‡‡ */  /* ‡ */
+}
+.sidenote__checkbox{
+  display: none;
+}
+
+.sidenote__content-parenthesis{
+  /* Hidden, but accessible to browsers that don't do CSS (e.g. screenreaders, Pocket) */
+  position: absolute;
+  left: -99999px;
+  top: auto;
+}
+
+@media screen and (max-width: 1079px){
+  .sidenote__checkbox ~ .sidenote__content{
+    /* Hidden, but accessible to browsers that don't do CSS (e.g. screenreaders, Pocket) */
+    position: absolute;
+    left: -99999px;
+    top: auto;
+  }
+  .sidenote__checkbox:checked ~ .sidenote__content{
+    position: relative; /* override hidden-but-accessible */
+    left: auto; /* override hidden-but-accessible */
+    display: block;
+    margin: 0.8rem 0;
+    padding: 0.8rem 1.6rem;
+  }
+  .sidenote__button{
+    color: -webki-link;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    cursor: pointer;
+  }
+  .sidenote__button:not(:hover):focus::after{
+    display: inline; /* display:inline-block causes misalignment between focus ring and background. */
+  }
+  .sidenote__checkbox:checked ~ .sidenote__button::after{
+    content: none;
+  }
+}
+
+@media screen and (min-width: 1080px){
+  .sidenote__content{
+    display: block;
+    position: absolute;
+    right: 0;
+    left: auto;
+    margin-top: calc(-1.5*1.2rem); /* Align sidenote top with main text */
+    margin-right: calc((((100vw - 600px)/2) - 12rem)/2); /*calc((-1*12rem) - (1*4rem));*/
+    margin-left: auto;
+    width: 12rem;
+  }
+}
+
+

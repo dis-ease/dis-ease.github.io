@@ -6,4 +6,6 @@ theme is [no style please](https://github.com/riggraz/no-style-please) (but with
 
 tagging from [lunarlogic](https://blog.lunarlogic.io/2019/managing-tags-in-jekyll-blog-easily/) and [longqian](https://longqian.me/2017/02/09/github-jekyll-tag/)
 
+sidenotes from [koos looijesteijn](https://www.kooslooijesteijn.net/blog/sidenotes-without-js) ([github repo](https://github.com/kslstn/sidenotes))
+
 
